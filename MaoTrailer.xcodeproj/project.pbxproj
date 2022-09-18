@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C131420528D7D57B00A9E292 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C131420428D7D57B00A9E292 /* HomeViewController.swift */; };
 		C1444E6828CE7463003DCA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1444E6728CE7463003DCA1A /* AppDelegate.swift */; };
 		C1444E6A28CE7463003DCA1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1444E6928CE7463003DCA1A /* SceneDelegate.swift */; };
 		C1444E6C28CE7463003DCA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1444E6B28CE7463003DCA1A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C131420428D7D57B00A9E292 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C1444E6428CE7463003DCA1A /* MaoTrailer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaoTrailer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1444E6728CE7463003DCA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1444E6928CE7463003DCA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C1444E7028CE7466003DCA1A /* Assets.xcassets */,
 				C1444E7228CE7466003DCA1A /* LaunchScreen.storyboard */,
 				C1444E7528CE7466003DCA1A /* Info.plist */,
+				C131420428D7D57B00A9E292 /* HomeViewController.swift */,
 			);
 			path = MaoTrailer;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				C1444E6C28CE7463003DCA1A /* ViewController.swift in Sources */,
 				C1444E6828CE7463003DCA1A /* AppDelegate.swift in Sources */,
 				C1444E6A28CE7463003DCA1A /* SceneDelegate.swift in Sources */,
+				C131420528D7D57B00A9E292 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

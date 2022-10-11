@@ -102,7 +102,7 @@ is not worth Watching</string>
                         <outlet property="bgView" destination="QGZ-VD-rgb" id="Tc6-bL-ZrT"/>
                         <outlet property="nextButton" destination="KGl-xh-wpf" id="FU9-rT-aUa"/>
                         <outlet property="onBoardingLabel" destination="nRm-UC-z8r" id="F0B-1I-Mn5"/>
-                        <segue destination="lPo-H1-Q1X" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cqc-d9-7Hp"/>
+                        <segue destination="x85-q5-1kl" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cqc-d9-7Hp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -404,12 +404,45 @@ is not worth Watching</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuz-SM-2GU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660.8695652173915" y="28.794642857142854"/>
+            <point key="canvasLocation" x="2687" y="-398"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wif-9m-vdb">
+            <objects>
+                <viewController id="mfz-GD-0hc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmz-8V-yNS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="94g-At-Hdl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tv_icon" selectedImage="tv_icon_on" id="e6Z-ap-70t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr7-Zl-M1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MTs-Pz-Zvo">
+            <objects>
+                <viewController id="RBD-CY-W2V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ee-mY-Hxn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oxh-Yn-LxW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile_icon" id="uew-cP-QnS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83T-zA-XML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="1025"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UB1-OU-Z4e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPo-H1-Q1X" customClass="NavigationController" customModule="MaoTrailer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="movies_icon" id="SSu-LH-Fpx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="f7P-Xe-cOU">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
@@ -422,14 +455,39 @@ is not worth Watching</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQB-h8-FyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1701" y="-398"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GjK-1w-ktN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="x85-q5-1kl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zLX-nr-PlW">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.88193279504776001" green="0.098547585308551788" blue="0.059036366641521454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.88193279504776001" green="0.098547585308551788" blue="0.059036366641521454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lPo-H1-Q1X" kind="relationship" relationship="viewControllers" id="JFs-2U-gcy"/>
+                        <segue destination="mfz-GD-0hc" kind="relationship" relationship="viewControllers" id="JZ7-g3-M6P"/>
+                        <segue destination="RBD-CY-W2V" kind="relationship" relationship="viewControllers" id="QDL-d7-Pqj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUc-gx-ZYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="750.72463768115949" y="28.794642857142854"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <image name="movies_icon" width="125" height="49"/>
         <image name="onBoarding_1" width="375" height="468"/>
         <image name="onBoarding_2" width="375" height="812"/>
+        <image name="profile_icon" width="125" height="49"/>
         <image name="slider" width="347" height="198"/>
+        <image name="tv_icon" width="125" height="49"/>
+        <image name="tv_icon_on" width="125" height="49"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

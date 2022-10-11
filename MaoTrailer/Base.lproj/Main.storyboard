@@ -129,9 +129,56 @@ is not worth Watching</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4KV-IR-tun">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxc-nO-9Bl">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxc-nO-9Bl" userLabel="TopView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                                <subviews>
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="px3-ac-0pV">
+                                                                        <rect key="frame" x="20" y="20" width="374" height="260"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9x3-da-nFv">
+                                                                            <size key="itemSize" width="314" height="204"/>
+                                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                        </collectionViewFlowLayout>
+                                                                        <cells>
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sliderCollectionCell" id="PGl-jB-fLV" customClass="SliderCollectionViewCell" customModule="MaoTrailer" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="28" width="314" height="204"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j6h-BP-Db4">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="204"/>
+                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-Ax-jut">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="204"/>
+                                                                                        </imageView>
+                                                                                    </subviews>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="trailing" secondItem="p8w-Ax-jut" secondAttribute="trailing" id="GbT-QY-C3y"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="top" secondItem="j6h-BP-Db4" secondAttribute="top" id="Gy4-rB-8NL"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="leading" secondItem="j6h-BP-Db4" secondAttribute="leading" id="TZ4-iU-jub"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="centerX" secondItem="j6h-BP-Db4" secondAttribute="centerX" id="USW-ye-bRg"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="p8w-Ax-jut" secondAttribute="bottom" id="a5T-G4-80B"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="top" secondItem="j6h-BP-Db4" secondAttribute="top" id="cAt-f0-lot"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="centerY" secondItem="j6h-BP-Db4" secondAttribute="centerY" id="dlK-ZH-0Kl"/>
+                                                                                        <constraint firstItem="p8w-Ax-jut" firstAttribute="leading" secondItem="j6h-BP-Db4" secondAttribute="leading" id="roy-h1-om5"/>
+                                                                                    </constraints>
+                                                                                </collectionViewCellContentView>
+                                                                                <size key="customSize" width="314" height="204"/>
+                                                                                <connections>
+                                                                                    <outlet property="sliderImageView" destination="p8w-Ax-jut" id="blY-xX-k4g"/>
+                                                                                </connections>
+                                                                            </collectionViewCell>
+                                                                        </cells>
+                                                                    </collectionView>
+                                                                </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="px3-ac-0pV" firstAttribute="leading" secondItem="Kxc-nO-9Bl" secondAttribute="leading" constant="20" id="67A-gD-li1"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="px3-ac-0pV" secondAttribute="trailing" constant="20" id="Xd7-JK-Xmc"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="px3-ac-0pV" secondAttribute="bottom" constant="20" id="Xpj-dT-IqL"/>
+                                                                    <constraint firstItem="px3-ac-0pV" firstAttribute="top" secondItem="Kxc-nO-9Bl" secondAttribute="top" constant="20" id="o79-ID-rSe"/>
+                                                                </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgM-j7-k0p">
                                                                 <rect key="frame" x="0.0" y="300" width="414" height="300"/>
@@ -352,6 +399,7 @@ is not worth Watching</string>
                     <connections>
                         <outlet property="nowCollectionView" destination="bro-dc-UdG" id="L7K-s2-Xw3"/>
                         <outlet property="popularCollectionView" destination="CwC-4m-QMl" id="Qbv-2d-tnW"/>
+                        <outlet property="sliderCollectionView" destination="px3-ac-0pV" id="y8a-Eh-WL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuz-SM-2GU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -381,6 +429,7 @@ is not worth Watching</string>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="onBoarding_1" width="375" height="468"/>
         <image name="onBoarding_2" width="375" height="812"/>
+        <image name="slider" width="347" height="198"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

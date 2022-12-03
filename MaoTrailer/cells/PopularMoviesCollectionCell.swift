@@ -11,4 +11,10 @@ class PopularMoviesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        posterImageView.image = nil
+    }
+
 }

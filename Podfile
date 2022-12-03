@@ -7,4 +7,5 @@ target 'MaoTrailer' do
   # Pods for MaoTrailer
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 4.0'
 end

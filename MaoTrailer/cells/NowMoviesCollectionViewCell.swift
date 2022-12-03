@@ -11,4 +11,9 @@ class NowMoviesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lable: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
 }

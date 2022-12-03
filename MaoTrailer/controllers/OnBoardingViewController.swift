@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OnBoardingViewController: UIViewController {
     
     var index = 0
     

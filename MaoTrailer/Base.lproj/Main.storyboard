@@ -118,10 +118,10 @@ is not worth Watching</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9e-Kx-NX5">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-tF-zM9">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="697"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-fS-5KB">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
@@ -497,7 +497,88 @@ is not worth Watching</string>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZd-91-RnF">
                                                                 <rect key="frame" x="0.0" y="279.33333333333331" width="393" height="620.66666666666674"/>
-                                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W03-pX-4Om">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="620.66666666666663"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WA-im-cdm">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJg-21-xkm">
+                                                                                        <rect key="frame" x="20" y="0.0" width="373" height="50"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="qJg-21-xkm" firstAttribute="leading" secondItem="9WA-im-cdm" secondAttribute="leading" constant="20" id="PaL-lG-sN9"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="qJg-21-xkm" secondAttribute="trailing" id="RbV-w9-LDw"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="qJg-21-xkm" secondAttribute="bottom" id="dFB-sa-x0J"/>
+                                                                                    <constraint firstAttribute="height" constant="50" id="iww-E6-ycn"/>
+                                                                                    <constraint firstItem="qJg-21-xkm" firstAttribute="top" secondItem="9WA-im-cdm" secondAttribute="top" id="pmp-SJ-Xed"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jin-Cv-uyM">
+                                                                                <rect key="frame" x="0.0" y="50" width="393" height="570.66666666666663"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <prototypes>
+                                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularTVCell" rowHeight="180" id="a6c-Rj-DiI" customClass="PopularTvTableViewCell" customModule="MaoTrailer" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="50" width="393" height="180"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6c-Rj-DiI" id="kC3-H1-Qaf">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xzV-8i-aiu">
+                                                                                                    <rect key="frame" x="10" y="10" width="373" height="160"/>
+                                                                                                    <subviews>
+                                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-zN-wtB">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="130"/>
+                                                                                                        </imageView>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSU-TU-ECr">
+                                                                                                            <rect key="frame" x="0.0" y="130" width="373" height="30"/>
+                                                                                                            <constraints>
+                                                                                                                <constraint firstAttribute="height" constant="30" id="h03-8i-NDj"/>
+                                                                                                            </constraints>
+                                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                            <nil key="textColor"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstItem="CLv-zN-wtB" firstAttribute="leading" secondItem="xzV-8i-aiu" secondAttribute="leading" id="3NU-Kx-Ylj"/>
+                                                                                                        <constraint firstItem="CLv-zN-wtB" firstAttribute="top" secondItem="xzV-8i-aiu" secondAttribute="top" id="V74-hm-u2W"/>
+                                                                                                        <constraint firstAttribute="trailing" secondItem="CLv-zN-wtB" secondAttribute="trailing" id="ZgK-IS-2jx"/>
+                                                                                                        <constraint firstItem="wSU-TU-ECr" firstAttribute="top" secondItem="CLv-zN-wtB" secondAttribute="bottom" id="p7g-UO-iDZ"/>
+                                                                                                    </constraints>
+                                                                                                </stackView>
+                                                                                            </subviews>
+                                                                                            <constraints>
+                                                                                                <constraint firstItem="xzV-8i-aiu" firstAttribute="top" secondItem="kC3-H1-Qaf" secondAttribute="top" constant="10" id="2Md-2j-gKa"/>
+                                                                                                <constraint firstAttribute="bottom" secondItem="xzV-8i-aiu" secondAttribute="bottom" constant="10" id="6YW-hV-qnd"/>
+                                                                                                <constraint firstItem="xzV-8i-aiu" firstAttribute="leading" secondItem="kC3-H1-Qaf" secondAttribute="leading" constant="10" id="Mdi-nn-2eF"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="xzV-8i-aiu" secondAttribute="trailing" constant="10" id="j2v-6j-7tb"/>
+                                                                                            </constraints>
+                                                                                        </tableViewCellContentView>
+                                                                                        <connections>
+                                                                                            <outlet property="posterImageView" destination="CLv-zN-wtB" id="Y8z-Zv-de5"/>
+                                                                                            <outlet property="tvNameLabel" destination="wSU-TU-ECr" id="Qay-B2-xVU"/>
+                                                                                        </connections>
+                                                                                    </tableViewCell>
+                                                                                </prototypes>
+                                                                                <sections/>
+                                                                            </tableView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="W03-pX-4Om" firstAttribute="leading" secondItem="YZd-91-RnF" secondAttribute="leading" id="SyU-2a-hTW"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="W03-pX-4Om" secondAttribute="trailing" id="VZj-Iu-UHn"/>
+                                                                    <constraint firstItem="W03-pX-4Om" firstAttribute="top" secondItem="YZd-91-RnF" secondAttribute="top" id="WAf-LP-qxz"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="W03-pX-4Om" secondAttribute="bottom" id="blz-cc-kpp"/>
+                                                                </constraints>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -544,6 +625,7 @@ is not worth Watching</string>
                     </view>
                     <navigationItem key="navigationItem" title="TV" id="pVN-YA-jWL"/>
                     <connections>
+                        <outlet property="popularTvTabelView" destination="jin-Cv-uyM" id="oGO-uF-wWn"/>
                         <outlet property="topRatedCollectionView" destination="nQz-wA-kSV" id="5nz-lj-IaC"/>
                     </connections>
                 </viewController>
@@ -645,9 +727,6 @@ is not worth Watching</string>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

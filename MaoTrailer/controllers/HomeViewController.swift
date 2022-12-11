@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class HomeViewController: UIViewController {
     var listOfNowMovies: NowMoviesResponse = NowMoviesResponse(date: NowDates(max: "22", min: "22"), page: 0, results: [])
@@ -28,14 +29,7 @@ class HomeViewController: UIViewController {
         nowCollectionView.dataSource = self
         popularCollectionView.dataSource = self
         sliderCollectionView.dataSource = self
-
-    }
-    let nowUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=04efb4789b6885a2f87e6bc96e26a9a4&language=en-US&page=1"
-
-    let popularUrl = "https://api.themoviedb.org/3/movie/popular?api_key=04efb4789b6885a2f87e6bc96e26a9a4&language=en-US&page=1"
-
-    let defaultLink = "https://image.tmdb.org/t/p/original"
-
+        }
     }
 
 
@@ -58,9 +52,9 @@ extension HomeViewController: UICollectionViewDataSource{
         if collectionView == self.nowCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nowCollectionIdentefier, for: indexPath) as! NowMoviesCollectionViewCell
 
-            let link = defaultLink + (listOfNowMovies.results![indexPath.row].poster_path ?? "")
+            let url = URL(string: ApiPaths.imagePath + (listOfNowMovies.results![indexPath.row].poster_path ?? ""))
+            cell.imageView.kf.setImage(with: url)
             cell.lable.text = listOfNowMovies.results![indexPath.row].title
-            cell.imageView.downloaded(from: link)
             return cell
         } else if collectionView == self.sliderCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionIdentefier, for: indexPath) as! SliderCollectionViewCell
@@ -70,9 +64,9 @@ extension HomeViewController: UICollectionViewDataSource{
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionIdentefier, for: indexPath) as! PopularMoviesCollectionCell
 
-            let link = defaultLink + (listOfPopularMovies.results![indexPath.row].poster_path ?? "")
+            let url = URL(string: ApiPaths.imagePath + (listOfPopularMovies.results![indexPath.row].poster_path ?? ""))
             cell.movieTitleLabel.text = listOfPopularMovies.results![indexPath.row].title
-            cell.posterImageView.downloaded(from: link)
+            cell.posterImageView.kf.setImage(with: url)
             return cell
         }
 
@@ -82,7 +76,7 @@ extension HomeViewController: UICollectionViewDataSource{
 extension HomeViewController {
 
     func getNowMovies(){
-        AF.request(nowUrl).responseDecodable(of: NowMoviesResponse.self) { response in
+        AF.request(ApiPaths.nowUrl).responseDecodable(of: NowMoviesResponse.self) { response in
             switch response.result{
             case .success(_):
                 self.listOfNowMovies = response.value!
@@ -97,7 +91,7 @@ extension HomeViewController {
 
     }
        func getPopularMovies(){
-        AF.request(popularUrl).responseDecodable(of: PopularMoviesResponse.self) { response in
+           AF.request(ApiPaths.popularUrl).responseDecodable(of: PopularMoviesResponse.self) { response in
             switch response.result{
             case .success(_):
                 self.listOfPopularMovies = response.value!

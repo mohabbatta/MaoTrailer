@@ -118,10 +118,10 @@ is not worth Watching</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9e-Kx-NX5">
-                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-tF-zM9">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="697"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-fS-5KB">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
@@ -218,7 +218,7 @@ is not worth Watching</string>
                                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJL-BS-5ZP">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="171" height="203.66666666666666"/>
                                                                                                         </imageView>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-Nv-Ftf">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-Nv-Ftf">
                                                                                                             <rect key="frame" x="0.0" y="211.66666666666666" width="171" height="20.333333333333343"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="height" constant="20.5" id="87v-wC-1se"/>
@@ -303,7 +303,7 @@ is not worth Watching</string>
                                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onBoarding_2" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-dJ-sUE">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="166" height="203.66666666666666"/>
                                                                                                         </imageView>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-W0-Las">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-W0-Las">
                                                                                                             <rect key="frame" x="0.0" y="211.66666666666666" width="166" height="20.333333333333343"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="height" constant="20.5" id="aXb-JK-XjW"/>

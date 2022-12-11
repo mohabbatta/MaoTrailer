@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import Kingfisher
 
 class HomeViewController: UIViewController {
@@ -76,7 +75,7 @@ extension HomeViewController: UICollectionViewDataSource{
 extension HomeViewController {
 
     func getNowMovies(){
-        AF.request(ApiPaths.nowUrl).responseDecodable(of: NowMoviesResponse.self) { response in
+        AF.request(ApiPaths.moviesNowUrl).responseDecodable(of: NowMoviesResponse.self) { response in
             switch response.result{
             case .success(_):
                 self.listOfNowMovies = response.value!
@@ -91,7 +90,7 @@ extension HomeViewController {
 
     }
        func getPopularMovies(){
-           AF.request(ApiPaths.popularUrl).responseDecodable(of: PopularMoviesResponse.self) { response in
+           AF.request(ApiPaths.moviesPopularUrl).responseDecodable(of: PopularMoviesResponse.self) { response in
             switch response.result{
             case .success(_):
                 self.listOfPopularMovies = response.value!
